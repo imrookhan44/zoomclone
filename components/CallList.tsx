@@ -62,7 +62,7 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
   const calls = getCalls();
   const noCallsMessage = getNoCallsMessage();
 
-  const isMeetingImminent = (startTime: Date) => {
+  const isMeetingImminent = (startTime: any) => {
     const currentTime = new Date();
     const timeDifference = (new Date(startTime).getTime() - currentTime.getTime()) / 1000; // Time difference in seconds
     return timeDifference <= 300; // 5 minutes before the meeting

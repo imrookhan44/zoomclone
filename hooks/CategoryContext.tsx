@@ -1,9 +1,14 @@
 // CategoryContext.js
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, ReactNode, useContext, useState } from 'react';
 
-export const CategoryContext = createContext(null);
+interface CategoryContextType {
+  category: string;
+  setCategory: React.Dispatch<React.SetStateAction<string>>;
+}
 
-export const CategoryProvider = ({ children }) => {
+// Create a context with the appropriate type and a default value of undefined
+const CategoryContext = createContext<CategoryContextType | undefined>(undefined);
+export const CategoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [category, setCategory] = useState('scientific'); // Default or fetched category
 
   return (

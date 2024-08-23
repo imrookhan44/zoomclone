@@ -30,7 +30,7 @@ const Sidebar = () => {
                 }
               )}
             >
-              {link.icon && <Image src={link.icon} alt={t(link.label)} width={24} height={24} />}
+              {link.imgURL && <Image src={link.imgURL} alt={t(link.label)} width={24} height={24} />}
               <Image src={link.imgURL} alt={t(link.label)} width={24} height={24} />
               <p className="text-lg font-semibold max-lg:hidden">
                 {t(link.label)} {/* Fetch the translated label */}

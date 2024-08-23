@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { uploadPdfFile } from '@/lib/firebaseUtils';
-import { fetchPdfFiles } from '@/lib/firebaseUtils';
+// import { uploadPdfFile } from '@/lib/firebaseUtils';
+// import { fetchPdfFiles } from '@/lib/firebaseUtils';
 
 const Uploads = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -20,9 +20,9 @@ const Uploads = () => {
 
     try {
       setUploadProgress(0);
-      const { id, fileUrl } = await uploadPdfFile(file);
-      setDownloadURL(fileUrl);
-      setPdfFiles([...pdfFiles, { id, file_url: fileUrl, file_name: file.name }]);
+      // const { id, fileUrl } = await uploadPdfFile(file);
+      // setDownloadURL(fileUrl);
+      // setPdfFiles([...pdfFiles, { id, file_url: fileUrl, file_name: file.name }]);
     } catch (error) {
       console.error('Upload failed', error);
     }
@@ -30,8 +30,8 @@ const Uploads = () => {
 
   useEffect(() => {
     const fetchFiles = async () => {
-      const files = await fetchPdfFiles();
-      setPdfFiles(files);
+      // const files = await fetchPdfFiles();
+      // setPdfFiles(files);
     };
     fetchFiles();
   }, []);
