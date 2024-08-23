@@ -1,5 +1,13 @@
 {
     "rewrites": [
-        { "source": "/(.*)", "destination": "/app/[locale]/test/" }
+      { "source": "/auth/(.*)", "destination": "/app/auth/$1" },
+      { "source": "/animation/(.*)", "destination": "/app/animation/$1" },
+      { "source": "/choices/(.*)", "destination": "/app/choices/$1" },
+      { "source": "/eco/(.*)", "destination": "/app/eco/$1" },
+      { "source": "/paiement/(.*)", "destination": "/app/paiement/$1" },
+      { "source": "/pc-svt/(.*)", "destination": "/app/pc-svt/$1" },
+      { "source": "/sm/(.*)", "destination": "/app/sm/$1" },
+      { "source": "/test", "destination": "/app/test/page.tsx" },
+      { "source": "/", "destination": "/app/test/page.tsx" }
     ]
-}
+  }
