@@ -1,5 +1,5 @@
 {
     "rewrites": [
-        {"source": "/(.*)", "destination": "/app/[locale]/"}
+        { "source": "/(.*)", "destination": "/app/$1/page.tsx" }
     ]
 }
