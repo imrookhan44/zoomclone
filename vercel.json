@@ -1,15 +1,5 @@
 {
-  "version": 2,
-  "builds": [
-      {
-          "src": "./app/[locale]/layout.tsx",
-          "use": "@vercel/node"
-      }
-  ],
-  "routes": [
-      {
-          "src": "/(.*)",
-          "dest": "./app/[locale]/layout.tsx"
-      }
+  "rewrites": [
+      {"source": "/(.*)", "destination": "/"}
   ]
 }
